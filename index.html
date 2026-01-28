@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AzPortal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 24px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #666;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .section {
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #1e1e3a;
+    }
+
+    .section-header svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ccc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #16162a;
+      border: 1px solid #1e1e3a;
+      border-radius: 14px;
+      padding: 28px 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #e0e0e0;
+      transition: transform 0.2s, border-color 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #667eea;
+      box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* Icon background colors */
+    .icon-clipboard { background: linear-gradient(135deg, #11998e, #38ef7d); }
+    .icon-json      { background: linear-gradient(135deg, #e94560, #c23152); }
+    .icon-xiangqi   { background: linear-gradient(135deg, #f7971e, #ffd200); }
+    .icon-connect5  { background: linear-gradient(135deg, #667eea, #764ba2); }
+    .icon-chess     { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .icon-horse     { background: linear-gradient(135deg, #f093fb, #f5576c); }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: #333;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AzPortal</h1>
+    <p>Your cloud applications and games, all in one place</p>
+  </header>
+
+  <!-- Applications Section -->
+  <div class="section">
+    <div class="section-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#667eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+        <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+        <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+      </svg>
+      <h2>Applications</h2>
+    </div>
+    <div class="grid">
+
+      <!-- Online Clipboard -->
+      <a class="card" href="https://online-clipboard-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-clipboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+            <rect x="8" y="2" width="8" height="4" rx="1"/>
+            <line x1="9" y1="10" x2="15" y2="10"/>
+            <line x1="9" y1="14" x2="15" y2="14"/>
+            <line x1="9" y1="18" x2="12" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-name">Online Clipboard</span>
+        <span class="card-desc">Copy and share text across devices</span>
+      </a>
+
+      <!-- PrettyJson -->
+      <a class="card" href="https://pretty-json-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-json">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+            <line x1="14" y1="4" x2="10" y2="20"/>
+          </svg>
+        </div>
+        <span class="card-name">Pretty Json</span>
+        <span class="card-desc">Format and validate JSON data</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Games Section -->
+  <div class="section">
+    <div class="section-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#764ba2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="3"/>
+        <circle cx="9" cy="12" r="1.5" fill="#764ba2"/>
+        <circle cx="15" cy="12" r="1.5" fill="#764ba2"/>
+        <line x1="6" y1="9" x2="6" y2="15"/>
+        <line x1="3" y1="12" x2="9" y2="12"/>
+      </svg>
+      <h2>Games</h2>
+    </div>
+    <div class="grid">
+
+      <!-- Chinese Chess -->
+      <a class="card" href="https://chinese-chess-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-xiangqi">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="6.5"/>
+            <text x="12" y="16" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" stroke="none">将</text>
+          </svg>
+        </div>
+        <span class="card-name">Chinese Chess</span>
+        <span class="card-desc">Play Xiangqi online</span>
+      </a>
+
+      <!-- Connect 5 -->
+      <a class="card" href="https://connect5-game-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-connect5">
+          <svg viewBox="0 0 24 24" fill="#fff">
+            <circle cx="6" cy="6" r="2.2"/>
+            <circle cx="12" cy="6" r="2.2"/>
+            <circle cx="18" cy="6" r="2.2"/>
+            <circle cx="6" cy="12" r="2.2"/>
+            <circle cx="12" cy="12" r="2.2"/>
+            <circle cx="18" cy="12" r="2.2"/>
+            <circle cx="6" cy="18" r="2.2"/>
+            <circle cx="12" cy="18" r="2.2"/>
+            <circle cx="18" cy="18" r="2.2"/>
+            <line x1="4" y1="4" x2="20" y2="20" stroke="#fff" stroke-width="1.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <span class="card-name">Connect 5</span>
+        <span class="card-desc">Five in a row strategy game</span>
+      </a>
+
+      <!-- English Chess -->
+      <a class="card" href="https://english-chess-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-chess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M12 3v2M9 7h6l-1 5H10L9 7zM8 12h8l1 4H7l1-4zM6 16h12v2H6v-2z" fill="#fff" stroke="none"/>
+            <path d="M9 20h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="3" r="1.5" fill="#fff"/>
+          </svg>
+        </div>
+        <span class="card-name">English Chess</span>
+        <span class="card-desc">Classic international chess</span>
+      </a>
+
+      <!-- Horse Racing -->
+      <a class="card" href="https://horse-racing-game-397310840166.us-central1.run.app" target="_blank">
+        <div class="card-icon icon-horse">
+          <svg viewBox="0 0 24 24" fill="#fff" stroke="none">
+            <path d="M18 3c-1 0-2 .5-2.5 1.5L14 7l-3-1-4 2-1 3 2 1 1.5-.5L11 14l-3 3v3h2v-2.5l3-3 2 2V20h2v-4l-2-3 1-3 2 1h2l1-3v-2c0-1.5-1-3-3-3z"/>
+          </svg>
+        </div>
+        <span class="card-name">Horse Racing</span>
+        <span class="card-desc">Exciting horse racing game</span>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>AzPortal &copy; 2026</footer>
+
+</body>
+</html>
