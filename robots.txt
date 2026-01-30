@@ -1,0 +1,6 @@
+# robots.txt for AzPortal
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://az-portal-397310840166.us-central1.run.app/sitemap.xml
